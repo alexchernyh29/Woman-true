@@ -1,0 +1,21 @@
+mixin slider()
+
+	- var data = getData('slides')
+
+	+b('section').slider
+		+e.container
+			each slide in data
+				+e.slider-item
+					+e.slide
+						+e.wrap
+							+e('h2').title!= slide.title
+							+e.content
+								+e.info
+									each item in slide.info
+										+e.info-item
+											+e('p').info-title!= item.info_title
+											+e('p').info-text!= item.info_text
+								+e.reality
+									+e('a')(href='#').link
+										+e('img')(src=`./images/arrow.svg` alt='arrow').arrow
+									+e('p').text!= slide.text

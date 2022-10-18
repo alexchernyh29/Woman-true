@@ -1,0 +1,23 @@
+.promo
+
+    &__wrap
+        position relative
+        padding w(105) w(15) w(75)
+        min-height 100vh
+        background url('/images/promo-bg.jpg') no-repeat 50% 0
+        background-size 100%
+        background-color $c-black
+        +below(1035px)
+            background-size cover
+        +below(768px)
+            padding wm(45) wm(35) wm(25)
+            background url('/images/promo-bg-mobile.jpg') no-repeat 50% 0
+
+    &::before
+        content ''
+        position absolute
+        top 0
+        height w(680)
+        left 0
+        right 0
+        background linear-gradient(to bottom, #000 0, #000 80%, transparent 100%)

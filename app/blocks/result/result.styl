@@ -1,0 +1,177 @@
+.result
+    display none
+
+    &__row
+        display flex
+        flex-flow row nowrap
+        align-items flex-start
+        justify-content space-between
+        background url('/images/result-bg.jpg') no-repeat center
+        background-size cover
+        padding w(34) w(238) w(20) w(201)
+        height 100vh
+        +below(768px)
+            padding wm(15) wm(20) wm(40)
+            flex-flow column
+            justify-content flex-start
+            align-items stretch
+            height auto
+            min-height 100vh
+            background-image url('/images/result-bg-mobile.jpg')
+
+    &__col
+        &:first-child
+            width w(890)
+            +below(768px)
+                width 100%
+                margin-bottom wm(40)
+        &:last-child
+            width w(480)
+            +below(768px)
+                width 100%
+
+    &__title
+        font-family $CenturyGothic
+        font-size w(26)
+        line-height w(80)
+        text-transform uppercase
+        letter-spacing 0.055em
+        +below(768px)
+            font-size wm(20)
+            line-height wm(80)
+
+    &__frame
+        background-color $c-grey-frame
+        border 1px solid $c-grey-frame
+        border-radius w(30)
+        padding w(40) w(40) w(35)
+        margin-bottom w(40)
+        +below(768px)
+            border-radius wm(30)
+            padding wm(15) wm(20)
+            margin-bottom wm(35)
+
+    &__frame-title
+        color $c-dark-red
+        font-family $TrajanPro3
+        font-size w(45)
+        line-height w(54)
+        text-transform uppercase
+        margin-bottom w(20)
+        +below(768px)
+            font-size wm(30)
+            line-height wm(40)
+
+    &__frame-text
+        font-family $CenturyGothic
+        font-size w(20)
+        line-height w(34)
+        color $c-light-black
+        +below(768px)
+            font-size wm(16)
+            line-height wm(26)
+
+    &__description
+        padding-left w(56)
+        margin-left w(328)
+        +below(768px)
+            padding-left wm(25)
+            margin-left 0
+            text-align center
+
+    &__description-text
+        position relative
+        color $c-white
+        font-family $CenturyGothic
+        text-transform uppercase
+        font-size w(20)
+        line-height w(35)
+        margin-bottom w(40)
+        +below(768px)
+            font-size wm(14)
+            line-height wm(22)
+            margin-bottom wm(30)
+            text-align left
+
+        &::after
+            content ""
+            position absolute
+            top 0
+            bottom 0
+            left w(-40)
+            width w(16)
+            background url('/images/arrow.svg') no-repeat bottom center
+            background-size cover
+            +below(768px)
+                left wm(-25)
+                width wm(8)
+
+
+    &__description-btn
+        background $c-red
+        border 2px solid $c-white
+        border-radius w(30)
+        width w(320)
+        font-family $CenturyGothic
+        font-size w(24)
+        line-height w(34)
+        text-transform uppercase
+        color $c-white
+        padding w(23) w(5)
+        transition color .3s, background-color .3s
+
+        +below(768px)
+            font-size wm(18)
+            line-height 1
+            padding wm(17) wm(5)
+            border-radius wm(30)
+            width wm(240)
+            margin-left wm(-25)
+
+        &:hover
+            color $c-red
+            background-color $c-white
+
+    &__quote
+        position relative
+        font-family $TrajanPro3
+        font-size w(34)
+        line-height w(44)
+        text-transform uppercase
+        color $c-white
+        border-bottom 1px solid $c-white
+        margin-bottom w(30)
+        padding-top w(90)
+        padding-bottom w(40)
+        margin-top w(50)
+        +below(768px)
+            margin-top 0
+            font-size wm(20)
+            line-height wm(30)
+            margin-bottom wm(6)
+            padding-top wm(40)
+            padding-bottom wm(20)
+
+        &::before
+            content ''
+            position absolute
+            top 0
+            left 0
+            background url('/images/prompt.svg') no-repeat center
+            background-size 100%
+            width w(82)
+            height w(82)
+            +below(768px)
+                width wm(41)
+                height wm(41)
+
+    &__author
+        font-family $TrajanPro3
+        font-size w(20)
+        line-height w(44)
+        text-transform uppercase
+        color $c-white
+        text-align right
+        +below(768px)
+            font-size wm(14)
+            line-height wm(44)

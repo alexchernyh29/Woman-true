@@ -1,0 +1,16 @@
+mixin result()
+
+    +b('section').result
+        +e.row
+            +e.col
+                +e('h4').title
+                +e.frame
+                    +e('h4').frame-title
+                    +e('p').frame-text
+                +e.description
+                    +e('p').description-text
+                    +e('button').description-btn Узнать
+            +e.col 
+                +e('p').quote
+                +e('h4').author
+            

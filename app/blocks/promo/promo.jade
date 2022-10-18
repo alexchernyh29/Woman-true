@@ -1,0 +1,10 @@
+include /blocks/promo-content/promo-content
+include /blocks/promo-banner/promo-banner
+
+mixin promo()
+
+    +b('section').promo
+        +e.wrap
+            +promo-content()
+            +promo-banner()
+        +footer()

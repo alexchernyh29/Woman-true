@@ -1,0 +1,120 @@
+.test-intro
+    position relative
+    height 100vh
+    display flex
+    flex-flow column
+    align-items flex-start
+    padding w(40) w(265) w(40) w(305)
+    justify-content flex-end
+    background url('/images/test-intro-bg.jpg') no-repeat center
+    background-size cover
+    +below(768px)
+        padding wm(45) wm(20) wm(25)
+        background-image url('/images/test-intro-bg-mobile.jpg')
+
+    &__close
+        display none
+        position absolute
+        top w(55)
+        right w(64)
+        width w(81)
+        height w(81)
+        cursor pointer
+        transition opacity .3s
+
+        +below(768px)
+            top wm(45)
+            right wm(20)
+            width wm(36)
+            height wm(36)
+
+        &:hover
+            opacity .7
+
+        img
+            width 100%
+    
+    &__title
+        margin-bottom w(60)
+        padding-left w(20)
+        font-family $TrajanPro3
+        font-size w(70)
+        line-height w(84)
+        text-transform uppercase
+        color $c-white
+        +below(768px)
+            margin-bottom 0
+            padding-left 0
+            position absolute
+            top wm(45)
+            left wm(20)
+            font-size wm(30)
+            line-height wm(40)
+            width 70%
+    
+    &__info
+        position relative
+        margin-bottom w(40)
+        +below(768px)
+            margin-bottom wm(20)
+            padding-right wm(20)
+            padding-bottom wm(20)
+
+            &::before
+                content ''
+                position absolute
+                top wm(20)
+                left wm(20)
+                right 0
+                bottom 0
+                background-color $c-red
+                border 1px solid $c-white
+                border-radius wm(30)
+    
+    &__info-wrap
+        position relative
+        background-color $c-white
+        border 1px solid $c-white
+        border-radius w(30)
+        padding w(40) w(55) w(60)
+
+        +below(768px)
+            border-radius wm(30)
+            padding wm(12) wm(20)
+    
+    &__info-text
+        font-family $CenturyGothic
+        font-size w(26)
+        line-height w(40)
+        color $c-black
+        text-transform uppercase
+        +below(768px)
+            font-size wm(16)
+            line-height wm(26)
+    
+    &__actions
+        align-self center
+    
+    &__btn
+        background-color $c-black
+        border 2px solid $c-white
+        border-radius w(30)
+        width w(390)
+        padding w(25) w(15)
+        font-family $CenturyGothic
+        font-size w(24)
+        line-height w(34)
+        color $c-white
+        text-transform uppercase
+        transition background-color .3s, color .3s
+
+        +below(768px)
+            border-radius wm(30)
+            width wm(240)
+            padding wm(9)
+            font-size wm(18)
+            line-height wm(34)
+
+        &:hover
+            background-color $c-white
+            color $c-black

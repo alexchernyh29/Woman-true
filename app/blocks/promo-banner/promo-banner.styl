@@ -1,0 +1,119 @@
+.promo-banner
+    position relative
+    padding w(80) w(40) 0
+    +below(768px)
+        padding 0
+
+    &__wrap
+        padding 0 w(325)
+        +below(768px)
+            padding 0
+
+    &__info
+        padding w(30)
+        background-color $c-grey-frame
+        border 1px solid $c-grey-frame
+        border-radius w(30)
+        +below(768px)
+            padding wm(25) wm(30)
+            border-radius wm(30)
+    
+    &__info-title,
+    &__info-text
+        font-family $CenturyGothic
+        font-size w(20)
+        line-height w(35)
+        color $c-black
+        text-transform uppercase
+
+        +below(768px)
+            font-size wm(16)
+            line-height wm(26)
+
+        span
+            color $c-red
+    
+    &__info-title
+        font-weight bold
+    
+    &__about
+        position relative
+        margin 0 0 w(130)
+        padding-top w(120)
+        padding-right w(325)
+        +below(768px)
+            margin-bottom wm(65)
+            padding 0
+    
+    &__about-content
+        width w(470)
+        margin 0 0 0 auto
+        +below(768px)
+            width 100%
+            margin 0
+    
+    &__about-warning
+        position absolute
+        top 0
+        right 0
+        width w(90)
+        height w(90)
+        background url('/images/18+.svg') no-repeat center
+        background-size cover
+        +below(768px)
+            display none
+    
+    &__about-text
+        font-family $TrajanPro3
+        margin-bottom w(40)
+        text-align center
+        font-size w(30)
+        line-height w(34)
+        text-transform uppercase
+        color $c-white
+
+        +below(768px)
+            font-size wm(25)
+            line-height wm(34)
+            margin-bottom wm(20)
+
+        span
+            color $c-red
+
+    &__about-logo
+        margin-bottom w(20)
+        +below(768px)
+            width 85%
+            margin 0 auto wm(20)
+
+        img
+            width 100%
+    
+    &__about-actions
+        text-align center
+    
+    &__about-btn
+        font-family $CenturyGothic
+        background-color $c-red
+        border-radius w(30)
+        border 2px solid $c-white
+        font-size w(24)
+        line-height w(34)
+        padding w(23) w(10)
+        min-width w(320)
+        color $c-white
+        text-transform uppercase
+        text-decoration none
+        transition background-color .3s, color .3s
+
+        +below(768px)
+            border-radius wm(30)
+            border-width 1px
+            font-size wm(18)
+            line-height wm(34)
+            width wm(240)
+            padding wm(10) wm(10)
+
+        &:hover
+            background-color $c-white
+            color $c-red

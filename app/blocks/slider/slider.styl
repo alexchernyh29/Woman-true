@@ -1,0 +1,213 @@
+.slider
+	width 100%
+	min-height 100vh
+	background-color $c-black
+	position relative
+	+below(768px)
+		height auto
+
+	.slick-slide:nth-child(2)
+		.slider__slide
+			background-image url('/images/slider-bg-1.jpg')
+			+below(768px)
+				background-image url('/images/slider-bg-1-mobile.jpg')
+		.slider__text
+			width w(551)
+			+below(768px)
+				width 100%
+	.slick-slide:nth-child(3)
+		.slider__slide
+			background-image url('/images/slider-bg-2.jpg')
+			+below(768px)
+				background-image url('/images/slider-bg-2-mobile.jpg')
+		.slider__text
+			width w(545)
+			+below(768px)
+				width 100%
+	.slick-slide:nth-child(4)
+		.slider__slide
+			background-image url('/images/slider-bg-3.jpg')
+			+below(768px)
+				background-image url('/images/slider-bg-3-mobile.jpg')
+		.slider__text
+			width w(486)
+			+below(768px)
+				width 100%
+	.slick-slide:nth-child(5)
+		.slider__slide
+			background-image url('/images/slider-bg-4.jpg')
+			+below(768px)
+				background-image url('/images/slider-bg-4-mobile.jpg')
+		.slider__text
+			width w(547)
+			+below(768px)
+				width 100%
+	.slick-slide:nth-child(6)
+		.slider__slide
+			background-image url('/images/slider-bg-5.jpg')
+			+below(768px)
+				background-image url('/images/slider-bg-5-mobile.jpg')
+		.slider__text
+			width w(520)
+			+below(768px)
+				width 100%
+	.slick-slide:nth-child(7)
+		.slider__slide
+			background-image url('/images/slider-bg-6.jpg')
+			+below(768px)
+				background-image url('/images/slider-bg-6-mobile.jpg')
+		.slider__text
+			width w(486)
+			+below(768px)
+				width 100%
+	.slick-slide:nth-child(8)
+		.slider__slide
+			background-image url('/images/slider-bg-7.jpg')
+			+below(768px)
+				background-image url('/images/slider-bg-7-mobile.jpg')
+		.slider__text
+			width w(653)
+			+below(768px)
+				width 100%
+	.slick-slide:nth-child(2n) .slider__slide
+		align-items flex-start
+		background-position center
+		+below(768px)
+			background-position center
+
+	&__slide
+		display flex
+		flex-flow column nowrap
+		align-items flex-end
+		position relative
+		padding w(30) w(234) w(97) w(198)
+		width 100%
+		min-height 100vh
+		background-position center
+		background-size cover
+		background-repeat no-repeat
+		+below(768px)
+			padding wm(34) wm(20)
+			align-items flex-start
+			background-position center
+
+	&__title
+		margin-bottom w(50)
+		max-width w(830)
+		font-family $TrajanPro3
+		font-size w(50)
+		line-height w(65)
+		text-transform uppercase
+		color #E5E5E5
+		span
+			color $c-red
+		+below(768px)
+			margin-bottom wm(345)
+			max-width 100%
+			font-size wm(30)
+			line-height wm(40)
+
+	&__content
+		display flex
+		flex-flow column
+		justify-content space-between
+		height w(654)
+		+below(768px)
+			height auto
+
+	&__info
+		padding w(29) w(42)
+		width w(634)
+		background-color #E5E5E5
+		border 1px solid #FFFFFF
+		border-radius w(30)
+		box-shadow w(20) w(20) $c-red, w(20) w(20) 0px 1px $c-white
+		+below(768px)
+			padding wm(13) wm(17)
+			width wm(354)
+			border-radius wm(30)
+			box-shadow wm(20) wm(20) $c-red, wm(20) wm(20) 0px 1px $c-white
+
+	&__info-title
+		font-size w(26)
+		line-height w(34)
+		text-transform uppercase
+		color $c-red
+		+below(768px)
+			font-size wm(14)
+			line-height wm(22)
+
+	&__info-item
+		margin-bottom w(26)
+		&:last-child
+			margin-bottom 0
+		+below(768px)
+			margin-bottom wm(24)
+
+	&__info-text
+		font-size w(26)
+		line-height w(34)
+		text-transform uppercase
+		+below(768px)
+			font-size wm(14)
+			line-height wm(22)
+
+	&__reality
+		display flex
+		align-items flex-end
+		padding-left w(42)
+		+below(768px)
+			justify-content flex-end
+			flex-flow row-reverse
+			padding-left 0
+			margin-top wm(53)
+
+	&__link
+		margin-right w(61)
+		height w(188)
+		transition opacity .3s
+		&:hover
+			opacity .7
+		+below(768px)
+			margin-right 0
+			margin-left wm(18)
+			height wm(130)
+
+	&__arrow
+		height 100%
+
+	&__text
+		font-size w(20)
+		line-height w(34)
+		color #FFFFFF
+		+below(768px)
+			font-size wm(16)
+			line-height wm(26)
+
+	.slick-arrow
+		position absolute
+		top 50%
+		transform translateY(-50%) rotate(45deg)
+		z-index 2
+		font-size 0
+		width w(80)
+		height w(80)
+		background-color inherit
+		border none
+		transition .3s
+		&:hover
+			opacity .7
+		+below(768px)
+			top 45%
+			width wm(30)
+			height wm(30)
+
+	.slick-prev
+		left 3%
+		border-left 5px solid $c-white
+		border-bottom 5px solid $c-white
+
+	.slick-next
+		right 3%
+		border-right 5px solid $c-white
+		border-top 5px solid $c-white

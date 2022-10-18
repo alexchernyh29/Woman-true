@@ -1,0 +1,62 @@
+.footer
+    display flex
+    justify-content space-between
+    align-items center
+    flex-flow row nowrap
+    padding w(32) w(230)
+    background-color $c-black
+    +below(768px)
+        padding wm(35) wm(30) wm(60)
+    
+    &__company
+        +below(768px)
+            display none
+
+    &__company-logo
+        color white
+        font-family $CenturyGothic
+        font-size w(30)
+        line-height w(20)
+        text-transform uppercase
+
+    &__links
+        display flex
+        flex-flow row nowrap
+        justify-content flex-end
+        align-items center
+
+    &__links-share
+        display inline-block
+        font-family $CenturyGothic
+        font-size w(30)
+        line-height w(20)
+        color $c-white
+        text-transform uppercase
+        margin-right w(75)
+        +below(768px)
+            font-size wm(20)
+            line-height wm(20)
+            margin-right wm(40)
+
+    &__links-item
+        display inline-block
+        margin-right w(15)
+        &:last-child
+            margin-right 0
+        +below(768px)
+            margin-right wm(10)
+
+    &__links-icons
+        width w(60)
+        display inline-block
+        font-size 0
+        transition opacity .3s
+
+        +below(768px)
+            width wm(32)
+
+        &:hover
+            opacity .7
+
+        img
+            width 100%

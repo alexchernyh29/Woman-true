@@ -1,0 +1,165 @@
+.banner
+	position relative
+	width 100%
+	min-height 100vh
+	background-color $c-black
+	background url('/images/banner-bg.jpg') no-repeat center
+	background-size cover
+	+below(768px)
+		background-image url('/images/banner-bg-mobile.jpg')
+
+	&__wrap
+		position relative
+		padding w(20) w(200) w(20) w(240)
+		height 100%
+		+below(768px)
+			padding 0 wm(17) wm(20)
+
+	&__header
+		display flex
+		justify-content space-between
+		margin-left w(14)
+		+below(768px)
+			margin-left 0
+			margin-bottom wm(14)
+			justify-content flex-start
+			flex-flow column nowrap
+			align-items center
+
+	&__sponsor
+		width w(187)
+		height w(112)
+		+below(768px)
+			width wm(150)
+			height wm(90)
+
+	&__title
+		width w(700)
+		font-size w(72)
+		line-height w(80)
+		letter-spacing 0.055em
+		text-transform uppercase
+		color #FFFFFF
+		span
+			color $c-red
+		+below(768px)
+			width 100%
+			font-size wm(35)
+			line-height wm(40)
+			text-align center
+
+	&__content
+		display flex
+		justify-content space-between
+		margin-top w(37)
+		width 100%
+		+below(768px)
+			flex-flow column-reverse nowrap
+
+	&__left
+		display flex
+		margin-top w(290)
+		+below(768px)
+			margin-top wm(259)
+
+	&__link
+		margin-top w(214)
+		margin-right w(93)
+		height w(188)
+		+below(768px)
+			margin-top wm(95)
+			margin-right wm(64)
+			height wm(130)
+
+	&__arrow
+		height 100%
+
+	&__about
+		display flex
+		flex-flow column nowrap
+		align-items center
+
+	&__logo
+		width w(380)
+		+below(768px)
+			width wm(190)
+
+	&__date
+		margin-top w(36)
+		font-family $TrajanPro3
+		font-size w(36)
+		line-height w(34)
+		text-transform uppercase
+		color #FFFFFF
+		+below(768px)
+			margin-top wm(10)
+			font-size wm(20)
+			line-height wm(34)
+
+	&__right
+		margin-right w(21)
+		+below(768px)
+			margin-right 0
+
+	&__description
+		padding w(25) w(30)
+		width w(689)
+		background-color #E5E5E5
+		border 1px solid #FFFFFF
+		border-radius w(30)
+		box-shadow w(20) w(20) $c-red, w(20) w(20) 0px 1px $c-white
+		+below(768px)
+			padding wm(16) wm(19)
+			width 100%
+			box-shadow none
+			border-radius wm(30)
+
+
+	&__text
+		font-size w(20)
+		line-height 170%
+		text-transform uppercase
+		color #000000
+		&:first-child
+			margin-bottom w(26)
+		span
+			color $c-red
+		strong
+			font-weight bold
+		+below(768px)
+			font-size wm(16)
+			line-height 162%
+			&:first-child
+				margin-bottom wm(26)
+
+	&__button
+		margin-top w(70)
+		margin-left w(165)
+		padding w(23) w(97)
+		font-size w(24)
+		text-transform uppercase
+		color #FFFFFF
+		background-color #000000
+		border 2px solid #FFFFFF
+		border-radius w(30)
+		transition background-color .3s, color .3s, border-color .3s
+		&:hover
+			color #000000
+			background-color #FFFFFF
+			border-color #000000
+		+below(768px)
+			margin-top wm(30)
+			margin-left wm(67)
+			padding wm(10) wm(45)
+			font-size wm(18)
+			border-radius wm(30)
+
+	&__age
+		position absolute
+		top w(60)
+		left w(50)
+		width w(90)
+		+below(768px)
+			top wm(1200)
+			left wm(347)
+			width wm(53)

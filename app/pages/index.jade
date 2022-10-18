@@ -1,0 +1,24 @@
+extends /blocks/layout-default/layout-default
+
+include /blocks/banner/banner
+include /blocks/slider/slider
+include /blocks/promo/promo
+include /blocks/footer/footer
+include /blocks/result/result
+include /blocks/test-intro/test-intro
+include /blocks/test/test
+include /blocks/testing/testing
+
+block head
+	- var pageTitle = 'Соври мне правду';
+
+block content
+	#fullpage
+		.section
+			+banner()
+		.section
+			+slider()
+		.section
+			+testing()
+		#promo.section
+			+promo()

@@ -1,0 +1,15 @@
+mixin promo-banner()
+
+    +b.promo-banner
+        +e.about
+            +e.about-warning
+            +e.about-content
+                +e.about-logo
+                    img(src='/images/logo.png' alt='Соври мне правду')
+                +e('p').about-text В кино с 9 сентября
+                +e.about-actions
+                    +e(href='https://youtu.be/1z8_zZfnmuA' target='_blank').about-btn Смотреть трейлер
+        +e.wrap
+            +e.info
+                +e('p').info-title Над созданием фильма работали:
+                +e('p').info-text <span>Режиссер</span> Ольга Акатьева, <span>Сценаристы</span> Виктория Островская, Дмитрий Магонов и Нелли Высоцкая. <span>В главных ролях:</span> Павел Прилучный, Дарья Мельникова, Евгений Романцов, Елизавета Кононова.

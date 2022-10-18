@@ -1,0 +1,152 @@
+.test
+    display none
+    position relative
+    min-height 100vh
+    padding w(50) w(330) w(150)
+    background url('/images/test-bg.jpg') no-repeat center
+    background-size cover
+    +below(768px)
+        padding wm(40) wm(20) wm(20)
+        background-image url('/images/test-bg-mobile.jpg')
+
+    &__wrap
+        height 100%
+        display flex
+        flex-flow column
+        align-items stretch
+        justify-content space-between
+        +below(768px)
+            justify-content flex-start
+
+    &__head
+        position relative
+        margin-bottom w(40)
+        +below(768px)
+            margin-bottom wm(40)
+    
+    &__arrow
+        position absolute
+        top w(58)
+        left w(40)
+        height w(16)
+        width w(188)
+        background url('/images/test-arrow.svg') no-repeat left center
+        background-size cover
+        +below(768px)
+            top wm(23)
+            left wm(20)
+            height wm(8)
+            width wm(106)
+
+    &__counter
+        width w(116)
+        height w(116)
+        margin 0 auto
+        display flex
+        flex-flow row nowrap
+        justify-content center
+        align-items center
+        background-color $c-grey-frame
+        border 1px solid $c-white
+        border-radius 50%
+        margin-bottom w(60)
+        +below(768px)
+            width wm(46)
+            height wm(46)
+            margin-bottom wm(32)
+    
+    &__counter-text
+        position relative
+        top w(4)
+        font-size w(50)
+        line-height w(60)
+        color $c-black
+        font-family $TrajanPro3
+        +below(768px)
+            font-size wm(20)
+            line-height wm(24)
+            top wm(2)
+    
+    &__title
+        font-size w(45)
+        line-height w(65)
+        text-align center
+        text-transform uppercase
+        color $c-white
+        +below(768px)
+            font-size wm(26)
+            line-height wm(40)
+
+        span
+            color $c-red
+    
+    &__item
+        margin-bottom w(40)
+        display flex
+        flex-flow row nowrap
+        justify-content flex-start
+        align-items center
+        cursor pointer
+
+        &:last-child
+            margin-bottom 0
+
+        &:hover
+            .test__sign
+                color $c-white
+                background-color $c-red
+
+        +below(768px)
+            margin-bottom wm(30)
+    
+    &__sign
+        position relative
+        width w(102)
+        height w(102)
+        background-color $c-grey-frame
+        color $c-black
+        border 1px solid $c-white
+        border-radius 50%
+        margin-right w(35)
+        flex-shrink 0
+        transition background-color .3s, color .3s
+        +below(768px)
+            width wm(48)
+            height wm(48)
+            margin-right wm(18)
+
+    &__sign-text
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)
+        font-family $TrajanPro3
+        font-size w(26)
+        +below(768px)
+            font-size wm(20)
+
+    &__answer
+        padding w(5) w(30)
+        background-color $c-grey-frame
+        border 1px solid $c-white
+        border-radius w(30)
+        display flex
+        flex-flow row nowrap
+        justify-content flex-start
+        align-items center
+        min-height w(102)
+        width 100%
+        +below(768px)
+            padding wm(15) wm(20)
+            min-height auto
+            border-radius wm(30)
+    
+    &__answer-text
+        color $c-black
+        text-transform uppercase
+        font-size w(26)
+        line-height w(40)
+        font-family $CenturyGothic
+        +below(768px)
+            font-size wm(14)
+            line-height wm(22)

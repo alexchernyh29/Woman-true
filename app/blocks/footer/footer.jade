@@ -1,0 +1,21 @@
+mixin footer()
+
+    +b('footer').footer
+        +e.company
+            +e('h4').company-logo HSM PRODUCTION
+        +e.links
+            +e('span').links-share Поделиться
+            +e('ul').links-list
+                +e('li').links-item
+                    +e('a').links-icons(href='#')
+                        img(src='/images/icon_vk.png')
+                +e('li').links-item
+                    +e('a').links-icons(href='#')
+                        img(src='/images/icon_fb.png')
+                +e('li').links-item
+                    +e('a').links-icons(href='#')
+                        img(src='/images/icon_tv.png')
+                +e('li').links-item
+                    +e('a').links-icons(href='#')
+                        img(src='/images/icon_odn.png')
+       

@@ -1,0 +1,20 @@
+mixin banner()
+
+	+b('section').banner
+		+e.wrap
+			+e.header
+				+e('img')(src=`./images/banner-sponsor.png` alt='PSYCHOLOGIES').sponsor
+				+e('h2').title Как распознать <span>манипулятора?</span>
+			+e.content
+				+e.left(class='wow bounceInLeft' data-wow-duration="3s" data-wow-delay="1s")
+					+e('a')(href='#').link
+						+e('img')(src=`./images/arrow.svg` alt='arrow').arrow
+					+e.about
+						+e('img')(src=`./images/logo.png` alt='Соври мне правду').logo
+						+e('p').date В КИНО С 9 СЕНТЯБРЯ
+				+e.right
+					+e.description(class='wow bounceInRight' data-wow-duration="3s")
+						+e('p').text Кто знает, что скрывается за благополучными фасадами домов, где живет любовь? Специалисты в области семейной терапии склонны называть манипуляции наиболее частотной проблемой в отношениях. Вы никогда не задумывались: что, если манипулятор живет рядом с вами? А если он внутри вас?
+						+e('p').text <span>Герои фильма «Соври мне правду», который можно будет посмотреть <strong>в кинотеатрах с 9 сентября</strong></span> и гид Psychologies по психологии здоровых отношений поможет вам увидеть скрытые манипуляции, найти выход из тупика и, пока не поздно, исправить ситуацию.
+					+e('button').button УЗНАТЬ БОЛЬШЕ
+			+e('img')(src=`./images/18+.svg` alt='18+').age
